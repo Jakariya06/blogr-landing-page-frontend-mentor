@@ -1,0 +1,216 @@
+// Primary Color
+$l-red: hsl(356, 100%, 66%);
+$vl-red: hsl(355, 100%, 74%);
+$vd-blue: hsl(208, 49%, 24%);
+
+// Neutral Color
+$white: hsl(0, 0%, 100%);
+$g-blue: hsl(240, 2%, 79%);
+$vdg-blue: hsl(207, 13%, 34%);
+$vdb-blue: hsl(240, 10%, 16%);
+
+// Background Gradient
+$grad-vl-red: hsl(13, 100%, 72%);
+$grad-l-red: hsl(353, 100%, 62%);
+
+$grad-vdg-blue: hsl(237, 17%, 21%);
+$grad-vdb-blue: hsl(237, 23%, 32%);
+
+
+@media (max-width: 1000px) {
+
+    .first__backdrop {
+        top: -39vh;
+        width: 250vw;
+    }
+
+    .mobile {
+        display: flex !important;
+
+        &__burger {
+            cursor: pointer;
+        }
+    }
+
+    .navbar {
+        text-align: center;
+        padding: 2.5rem 2rem;
+
+        &__holder {
+            color: $vdb-blue;
+        }
+
+        &__holder:nth-of-type(1) {
+            background-color: $white;
+            border-radius: 8px;
+            display: block;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 2rem;
+            position: absolute;
+            top: 100%;
+            transition: max-height 0.3s ease-in-out;
+            width: calc(100% - 64px);
+            z-index: 10
+        }
+
+        &__holder:nth-of-type(2),
+        &__brand,
+        &__arrow_light {
+            display: none;
+        }
+
+        &__list {
+            display: block;
+            justify-content: center;
+            margin: 0;
+            padding: 1rem 0.5rem 0.2rem;
+            width: 100%;
+        }
+
+        &__list > span {
+            display: inline-block;
+            width: 120px;
+        }
+
+        &__arrow_dark {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0.5rem;
+        }
+
+        &__mbl_list {
+            display: block;
+            margin: 0;
+            padding: 0.75rem 2rem;
+            position: relative;
+            width: 100%;
+        }
+
+        &__mbl_list:nth-of-type(5) {
+            margin-top: 1rem;
+        }
+
+        &__mbl_list:nth-of-type(5)::after {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 1px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        &__mbl_list> a {
+            display: block;
+            padding: 0.75rem 0.2rem;
+        }
+
+        &__mbl_list:nth-of-type(6)>a {
+            background: linear-gradient(to right, $grad-vl-red, $grad-l-red);
+            border-radius: 1.5rem;
+            color: $white;
+            margin: 0 auto;
+            width: 120px;
+        }
+    }
+
+    .dropdown {
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        margin-top: 1rem;
+        padding: 0 2rem;
+        position: static;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 0 1rem;
+
+        &__headline {
+            font-size: 2.5rem;
+        }
+    }
+
+    .feature {
+        padding: 4rem 0;
+
+        &__title {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .desktop {
+        flex-direction: column-reverse;
+        padding: 0 0 6rem;
+
+        &__container {
+            text-align: center;
+        }
+
+        &__container:nth-of-type(1) {
+            padding: 0 2rem;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__image_mbl {
+            display: inline-block;
+        }
+    }
+
+    .phone {
+
+        &__block {
+            background-size: 70rem;
+            background-position: center -33rem;
+            flex-wrap: wrap;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        &__container:nth-of-type(1) {
+            height: 10rem;
+        }
+
+        &__container:nth-of-type(2) {
+            padding: 0 2rem;
+        }
+
+        &__image {
+            position: relative;
+            top: -22rem;
+        }
+    }
+
+    .laptop {
+        flex-wrap: wrap;
+        margin-top: 0;
+        padding: 4rem 0;
+        text-align: center;
+
+        &__container:nth-of-type(2) {
+            padding: 0 2rem;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__image_mbl {
+            display: inline-block
+        }
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        text-align: center;
+
+        &__block {
+            flex: 0 1 50%;
+        }
+    }
+}
